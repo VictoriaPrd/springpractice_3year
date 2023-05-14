@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Анкета</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        .form-select:focus,
+        .form-control:focus {
+            border-color: #EEC28F;
+            box-shadow: 0 0 0 0.2rem rgba(238, 194, 143, 0.25);
+        }
+
+        h6 {
+            color: #EEC28F;
+        }
+        body{
+            background-color: #48416C;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="p-1">
+        <h1 class="text-center fw-bold m-3" style="color: #EEC28F;">Подбери игру</h1>
+        <form action="/found" class="m-1 p-1" method="post">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating m-2">
+                            <h6>Стратегия</h6>
+                            <select class="form-select" id="strategy" name="strategy"
+                                aria-label="Floating label select example"
+                                style="background-color: #383258; color: #EEC28F; border-color: #EEC28F;">
+                                <option selected value="0.0">Нет</option>
+                                <option value="1.0">Да</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating m-2">
+                            <h6>Тематическая</h6>
+                            <select class="form-select" id="thematic" name="thematic"
+                                aria-label="Floating label select example"
+                                style="background-color: #383258; color: #EEC28F; border-color: #EEC28F;">
+                                <option selected value="0.0">Нет</option>
+                                <option value="1.0">Да</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating m-2">
+                            <h6>Для детей</h6>
+                            <select class="form-select" id="children" name="children"
+                                aria-label="Floating label select example"
+                                style="background-color: #383258; color: #EEC28F; border-color: #EEC28F;">
+                                <option selected value="0.0">Нет</option>
+                                <option value="1.0">Да</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating m-2">
+                            <h6>Для вечеринки</h6>
+                            <select class="form-select" id="party" name="party"
+                                aria-label="Floating label select example"
+                                style="background-color: #383258; color: #EEC28F; border-color: #EEC28F;">
+                                <option selected value="0.0">Нет</option>
+                                <option value="1.0">Да</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating m-2">
+                            <h6>Абстрактная</h6>
+                            <select class="form-select" id="adstract" name="abstract"
+                                aria-label="Floating label select example"
+                                style="background-color: #383258; color: #EEC28F; border-color: #EEC28F;">
+                                <option selected value="0.0">Нет</option>
+                                <option value="1.0">Да</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating m-2">
+                            <h6>Военная</h6>
+                            <select class="form-select" id="war" name="war" aria-label="Floating label select example"
+                                style="background-color: #383258; color: #EEC28F; border-color: #EEC28F;">
+                                <option selected value="0.0">Нет</option>
+                                <option value="1.0">Да</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating m-2">
+                            <h6>Для всей семьи</h6>
+                            <select class="form-select" id="family" name="family"
+                                aria-label="Floating label select example"
+                                style="background-color: #383258; color: #EEC28F; border-color: #EEC28F;">
+                                <option selected value="0.0">Нет</option>
+                                <option value="1.0">Да</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating m-2">
+                            <h6>Настраиваемая</h6>
+                            <select class="form-select" id="customize" name="customize"
+                                aria-label="Floating label select example"
+                                style="background-color: #383258; color: #EEC28F; border-color: #EEC28F;">
+                                <option selected value="0.0">Нет</option>
+                                <option value="1.0">Да</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating m-2">
+                            <h6>Минимальное число участников</h6>
+                            <input type="text" class="form-control" id="min_players" name="min_players"
+                                style="background-color: #383258; color: #EEC28F; border-color: #EEC28F;">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating m-2">
+                            <h6>Возрастное ограничение</h6>
+                            <input type="text" class="form-control" id="min_age" name="min_age"
+                                style="background-color: #383258; color: #EEC28F; border-color: #EEC28F;">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating m-2">
+                            <h6>Максимальное время игры (мин.)</h6>
+                            <input type="text" class="form-control" id="max_time" name="max_time"
+                                style="background-color: #383258; color: #EEC28F; border-color: #EEC28F;">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn m-2 fw-bold fs-4"
+                        style="background-color: #383258; color: #EEC28F;">Подобрать</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
